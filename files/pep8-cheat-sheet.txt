@@ -1,0 +1,144 @@
+Consistency
+-----------------
+If it would break the code or make the code less readable, ignore the standard.
+
+
+Indendation
+---------------
+Indent with spaces
+
+2 spaces per indent level
+
+When continuing lines for function parameters on a different line, align with the opening delimiter or add a new line with a new level of indentation and put the variables/conditions there.
+
+When continuing lines for conditional statements on a different line, break before the operator.
+
+Closing brackets should either line up with the first non-white space character on the previous line or line up with the first character of the line the opening bracket is on.
+
+
+Line Length
+--------------
+Code lines should be max 79 characters, comment or docstring lines max 72.
+
+
+Blank Lines
+--------------
+Use blank lines to seperate out related groups of functions
+
+Top level functions and class definitions get two blank lines
+
+Method definitions get one blank line
+
+
+Source Files
+------------------
+UTF-8, no encoding declaration needed
+
+
+Imports
+-----------------
+Imports should be at the top of the file, after module comments and docstrings, and before module global variables and constants
+
+Imported packages should be on their own line
+
+Importing multiple subpackages from a package can be done on the same line
+
+Import order: STL imports, third party imports, application/library specific imports
+
+Absolute imports are preferred over relative imports. Relative imports are okay if the package name is long
+
+Wildcard imports (import *) should be avoided
+
+
+Module Level __ names
+---------------------------
+Come after the docstring but come before any import statements other than __future__. __future__ imports must appear before anything     execpt docstrings.
+
+
+String Quotes
+-----------------
+Pick single or double, use the other to avoid using backslashes in strings with quotes.
+
+For triple quoted strings use double quotes.
+
+
+Whitespace
+----------------
+No whitespace in parenthesis and brackets.
+
+No whitespace between a comma and a closing space.
+
+No whitespace before a comma, semicolon, or colon. Exception: if the colon is being used as a slicing operator, it should have the same amount of space on both sides.
+
+No whitespace before the opening parenthesis or bracket of a function call, indexing, or slicing.
+
+No more than one space around an operator to line it up with another.
+
+Avoid trailing whitespace when possible.
+
+One space around assignment, augmented assignment, comparison, and boolean operators. When using multiple operators, put one extra space on both sides of the operator with the lowest priority.
+
+Function annotations should have one space on each side of the arrow if present.
+
+No spaces on the equals sign if being used for a keyword argument or default values for function parameters.
+
+Compund statements are a no go.
+
+Multiclause conditional statements should not all have their own lines.
+
+
+Trailing Commas
+-------------------
+Surround them with parenthesis if being used for a one element tuple or similar.
+
+If there are trailing commas for a multi element tuple or similar, put the closing delimiter on its own line.
+
+
+Comments
+------------
+Comments should be complete sentences, and kept up to date with code. Block comments generally consist of paragraphs. You should put two spaces after every period in a multisentence comment, except for the last sentence.
+
+
+Block Comments
+----------------
+Block comments should be indented to the same level of code that it's about. Every line in a block comment starts with # and a space unless its indented text inside the comment. Paragraphs are separated by a black line starting with #
+
+
+Inline Comments
+------------------
+Inline comments go on the same line as the code they're about. They should start with # and a space. They should be used sparingly.
+
+
+Docstrings - '''
+--------------
+Write docstrings for all public modules, functions, classes, and methods.
+
+The ending ''' for a multiline docstring should be on its own line. The ''' for a single ling docstring should go on the same line.
+
+
+Naming Conventions
+----------------------
+Avoid lowercase L, uppercase O, and uppercase I.
+
+Modules and packages should have short, all lowercase names. Modules can have underscores if it improves readablity.
+
+Class and Exception names should use CapWords. Execeptions should have the suffix error if its an error.
+
+Variable Type names should be short and use CapWords. Use _co or _contra if they have covariant or contravariant behavior.
+
+Global variables, Function names, and variable names should be lowercase, with words seperated by underscores to improve readablity.
+
+Function and method arguments shold use self as the first argument to instance methods and cls for the first argument to class methods. If an argument name clashes with a reserved word, add a trailing underscore.
+
+Constants should have all caps names.
+
+Private things should have one leading underscore.
+
+
+Extras
+--------------
+Comparisons to things like None should be done with is or not.
+
+Use def instead of assignment if lambda functions are involved.
+
+Derive exceptions from Exception instead of BaseException unless you don't want to catch them.

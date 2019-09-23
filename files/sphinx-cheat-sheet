@@ -1,0 +1,20 @@
+Start: sphinx-quickstart
+
+Seperate source and build directories, it makes things easier, answer everything else how you'd like.
+
+In the source directory there will be an index.rst, this file allows you to structure documentation. Include files under the toctree section by adding a path to the file relative to the source directory (but it only works if the files are in the source directory or a sub directory in it), not including the file extension and leaving a blank line after the pregenerated options. If you want to include a loose file in the documentation, it should be an .rst file. Unless you want multiple files documented on the same page, every page should have its own .rst file. If you want to include a file outside of the source directory, modify conf.py to activate the import and sys.path statements and make it pull from ./../[path].
+
+If you want to include the documentation written in your source code in a Sphinx documentation, modify the conf.py in the source directory by adding 'sphinx.ext.autodoc' to the extensions value and add a relative path to it, stopping at one level above the file (ie: the directory the file is in). By default these docstrings are assumed to be written in the .rst style but by including 'sphinx.ext.napoleon' in your conf.py file, you can also use Google or NumPy style docstrings.
+
+Autofunction has the ability to document functions and more through including auto[function/decorator/data/method/attribute]::[function/decorator/data/method/attribute name] in your .rst file. It can also document modules by using auto[module,class,exception]::[module/class/exception name] and a on a new line with one level of indentation :members:[function/variable list]. Omitting the list when using :members: will document all non-private functions and variables. If you do this, members without docstrings will be left out unless you include :no-undoc-members: on a new line with the same indentation level as :members:.
+
+Build docs by calling make html.
+
+Links
+-----------
+reStructured Text documentation: http://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
+
+numpy style docstring guide: https://numpydoc.readthedocs.io/en/latest/format.html
+
+numpy and google style docstring examples: https://www.datacamp.com/community/tutorials/docstrings-python#sixth-sub
+
