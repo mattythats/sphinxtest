@@ -9,3 +9,6 @@
 4-Run make html in the directory you ran sphinx-quickbuilder in
 
 5-browse the documentation built in your build directory
+
+
+The files directory contains cheatsheets I wrote for the PEP8 Python standard as well as a sort of abridged quickstart guide for Sphinx.
