@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath('./testing/'))
 project = 'docTest-2'
 copyright = '2019, Matthew Tibebe'
 author = 'Matthew Tibebe'
-master_doc = 'index.rst'
+master_doc = 'index'
 
 # -- General configuration ---------------------------------------------------
 
